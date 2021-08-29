@@ -11,7 +11,32 @@ class ManagerTransactions extends Component {
   };
 
   componentDidMount() {
-    this.setState({ ...this.state, balance: 500 });
+    let transactions = [];
+
+    let dateobj = new Date("March 10, 2021 15:04:02:072");
+    let newTransaction = {
+      date: dateobj.toISOString(),
+      operation: "Add",
+      amount: 100,
+    };
+    transactions.push(newTransaction);
+
+    dateobj = new Date("March 10, 2021 15:04:04:748");
+    newTransaction = {
+      date: dateobj.toISOString(),
+      operation: "Add",
+      amount: 500,
+    };
+    transactions.push(newTransaction);
+
+    dateobj = new Date("March 10, 2021 15:04:07:443");
+    newTransaction = {
+      date: dateobj.toISOString(),
+      operation: "Remove",
+      amount: 50,
+    };
+    transactions.push(newTransaction);
+    this.setState({ ...this.state, balance: 550, transactions: transactions });
   }
 
   transactionAmountChangeHandler = e => {
@@ -36,7 +61,6 @@ class ManagerTransactions extends Component {
   };
 
   onRemoveTransactionClickHandler = () => {
-    debugger;
     if (this.state.balance <= 0) {
       alert("Insufficient balance in account");
       return;
@@ -52,10 +76,8 @@ class ManagerTransactions extends Component {
   };
 
   addTransactionHandler = operation => {
-    debugger;
     let currentdate = new Date();
     let formattedCurrentDate = currentdate.toISOString();
-    debugger;
     let newTransaction = {
       date: formattedCurrentDate,
       operation: operation,
