@@ -1,0 +1,88 @@
+.transacetion-manager {
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 32rem;
+  max-width: 95%;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.transactions {
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 25rem;
+  max-width: 95%;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-transaction {
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 25rem;
+  max-width: 95%;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-transaction button {
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 13px;
+  border: 1px solid #000000;
+  margin-right: 1rem;
+}
+
+.new-transaction__control {
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.new-transaction__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-transaction__control input {
+  font: inherit;
+  padding: 0.5rem;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.transactions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-list-title {
+  text-align: left;
+}
+
+.transactions-list__fallback {
+  text-align: center;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.transaction-date {
+  width: 55%;
+  text-align: left;
+}
+
+.transaction-amount {
+  width: 25%;
+  text-align: left;
+}
+
+.transaction-operation {
+  width: 20%;
+  text-align: right;
+}
